@@ -1,0 +1,8 @@
+.scroll-btn svg {
+    display: block;
+    transition: 1s;
+}
+
+.scroll-btn:hover svg path {
+    fill: var(--main-wheat);
+}

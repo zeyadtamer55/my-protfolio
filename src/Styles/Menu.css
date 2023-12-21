@@ -1,0 +1,12 @@
+.menu .menu-anchor {
+    transition: .7s;
+}
+
+.menu .menu-anchor.active {
+    color: var(--main-wheat);
+}
+
+
+.menu .menu-anchor:hover {
+    color: var(--main-wheat);
+}

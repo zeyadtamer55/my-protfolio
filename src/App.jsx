@@ -6,11 +6,9 @@ import Menu from "./Layout/Menu/Menu"
 
 function App() {
 
-
     return (
         <>
             <BrowserRouter>
-            
                 
                 <Menu/>
                 <Header/>
@@ -25,7 +23,6 @@ function App() {
                     }
 
                 </Routes>
-
 
             </BrowserRouter>
         </>
