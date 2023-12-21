@@ -1,0 +1,64 @@
+@keyframes morphing {
+    0% {
+        border-radius: 30% 70% 72% 28% / 30% 30% 70% 70% ;
+    }
+    25% {
+        border-radius: 73% 27% 78% 22% / 25% 36% 64% 75% ;
+
+    }
+    50% {
+        border-radius: 60% 40% 72% 28% / 67% 71% 29% 33% ;
+
+    }
+
+    75% {
+        border-radius: 70% 30% 31% 69% / 68% 74% 26% 32% ;
+    }
+    100% {
+        border-radius: 30% 70% 72% 28% / 30% 30% 70% 70% ;
+
+    }
+}
+
+
+
+.morphing-shape {
+    -webkit-animation: morphing infinite alternate 10s linear;
+    -o-animation: morphing infinite alternate 10s linear;
+    -moz-animation: morphing infinite alternate 10s linear;
+    
+}
+span.morphing-shape {
+    transition: .5s;
+
+    &:nth-of-type(1) {
+        -webkit-animation: morphing infinite alternate 7s linear;
+        -o-animation: morphing infinite alternate 7s linear;
+        -moz-animation: morphing infinite alternate 7s linear;
+
+    }
+    &:nth-of-type(2) {
+        -webkit-animation: morphing infinite alternate-reverse 7s linear;
+        -o-animation: morphing infinite alternate-reverse 7s linear;
+        -moz-animation: morphing infinite alternate-reverse 7s linear;
+
+    }
+}
+.menu-icon.active span.rotating-dash:nth-of-type(3) {
+    transform: rotate(45deg) !important;
+
+}
+
+
+
+.menu-icon.active span.rotating-dash:nth-of-type(4) {
+    transform: rotate(-45deg) !important;
+
+
+}
+
+span.rotating-dash {
+    transition: .7s;
+} 
+
+
