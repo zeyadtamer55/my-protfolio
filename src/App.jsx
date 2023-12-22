@@ -3,6 +3,7 @@ import Pages from "./Data/Pages"
 import Header from "./Layout/Header/Header"
 import AnimCursor from "./Layout/AnimCursor"
 import Menu from "./Layout/Menu/Menu"
+import MainBg from "./Layout/MainBg/MainBg"
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
                 <Menu/>
                 <Header/>
                 <AnimCursor/>
-            
+                <MainBg/>
+
                 <Routes>
 
                     {

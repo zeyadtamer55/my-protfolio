@@ -3,7 +3,7 @@ import gsap from "gsap"
 // svg paths
 const start = "M0 2S175 1 500 1s500 1 500 1V0H0Z"
 const middle = "M0 502S175 272 500 272s500 230 500 230V0H0Z"
-const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z"
+const end = "M0 2010S175 1990 500 1990s500 10 500 10V0H0Z"
 
 const menuSvgPath = ".menu .overlay svg path"
 
@@ -33,16 +33,12 @@ export const openMenu = () => {
             d:middle
         },
         duration:1,
-        ease:"power2.inOut"
+        ease:"power2.inOut",
+        onStart: () => document.querySelector(".menu-icon").classList.add("gold")
+
     })
  
-    tl.to(".menu-icon .morphing-shape", {
-        borderColor:"var(--main-wheat)"
-    },"<")
-   
-    tl.to(".menu-icon .rotating-dash", {
-        background:"var(--main-wheat)"
-    },"<")
+ 
 
     tl.to(menuSvgPath,{
         attr: {
@@ -93,17 +89,10 @@ export const closeMenu = () => {
             d:start
         },
         duration:1,
-        ease:"power2.inOut"
+        ease:"power2.inOut",
+        onStart: () => document.querySelector(".menu-icon").classList.remove("gold")
     })
 
-    
-    tl.to(".menu-icon .morphing-shape", {
-        borderColor:"var(--black)"
-    },"<")
-   
-    tl.to(".menu-icon .rotating-dash", {
-        background:"var(--black)"
-    },"<")
 
     tl.to(menuSvgPath,{
         y:-100,
@@ -134,7 +123,7 @@ const showMenuItems = (tl) => {
     },
     {
         yPercent:0,
-        duration:1,
+        duration:.5,
         ease:"power2.inOut"
     })
 }
@@ -144,7 +133,7 @@ const hideMenuItems = (tl) => {
 
     tl.to(".menu .menu-anchor", {
         yPercent:300,
-        duration:1,
+        duration:.5,
         ease:"power2.inOut"
 
     })

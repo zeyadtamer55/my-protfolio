@@ -6,7 +6,7 @@ import Title from "./Title"
 const Hero = () => {
     
     return (
-        <div className='w-full relative h-screen pt-[100px] '>
+        <div className='w-full hero-section relative h-screen pt-[100px] '>
 
             <div className='absolute z-[-1] blur-xl'>
                 <div className="morphing-shape overflow-hidden w-[300px] aspect-square">
@@ -28,7 +28,7 @@ const Hero = () => {
                     </p>
                 </div>
                 
-                <div className='w-1/2 mt-5'>
+                <div className='w-[300px] mt-5'>
                     <MarqueeText text={"Lets work togeather"}/>
                 </div>
 

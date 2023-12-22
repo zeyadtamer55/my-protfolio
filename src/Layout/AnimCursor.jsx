@@ -3,11 +3,10 @@ import AnimatedCursor from 'react-animated-cursor'
 
 const AnimCursor = () => {
     
+    return window.innerWidth > 700 ?
     
-    
-    return (
+     (
         <AnimatedCursor
-
             innerSize={8}
             outerSize={80}
             color='225,225,225'
@@ -32,7 +31,7 @@ const AnimCursor = () => {
                 ".clickable",
             ]}
         />
-    )
+    ) : <></>
 }
 
 export default AnimCursor

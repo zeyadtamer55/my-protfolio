@@ -5,9 +5,10 @@ const Logo = () => {
     
     return (
         <Link to="/">
-            <h1 className=' text-4xl text-main-black'>
+            <h1 className=' font-algeros text-4xl '>
                 
                 zeyad
+                tamer
 
             </h1>
         </Link>
