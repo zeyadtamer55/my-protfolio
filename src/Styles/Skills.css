@@ -1,0 +1,15 @@
+.moving-skill img {
+    transition: .4s;
+}
+
+.moving-skill span {
+    transition: .4s;
+}
+
+.moving-skill:hover img {
+    opacity: 0;
+}
+
+.moving-skill:hover span {
+    opacity: 1;
+}

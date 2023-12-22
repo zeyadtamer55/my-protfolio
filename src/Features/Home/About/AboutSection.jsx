@@ -1,13 +1,13 @@
 import Description from './Description'
 
-const About = () => {
+const AboutSection = () => {
 
     const title = "hi world, my name is zeyad tamer"
 
 
 
     return (
-        <div className='container !pt-[100px] h-screen about-section'>
+        <div className='container !pt-[100px] min-h-screen about-section'>
             <h2 className=' font-algeros text-7xl w-fit mt-3 text-main-wheat'>about me</h2>
             
             <p className='text-3xl mt-4'>
@@ -25,4 +25,4 @@ const About = () => {
     )
 }
 
-export default About
+export default AboutSection
