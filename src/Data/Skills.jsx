@@ -19,7 +19,7 @@ export const Skills = [
         href:css,
     },
     {
-        name:"JS",
+        name:"Java Script",
         href:js,
     },
     {

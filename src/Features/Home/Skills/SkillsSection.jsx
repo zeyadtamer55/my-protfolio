@@ -8,7 +8,7 @@ const SkillsSection = () => {
     useEffect(()=>{
         const movingSkills = gsap.utils.toArray(".moving-skill")
 
-        const skillDistanceX = (movingSkills.length - 1) * -100
+        const skillDistanceX = (movingSkills.length - 2) * -100
 
         gsap.to(movingSkills,{
             xPercent: skillDistanceX,
