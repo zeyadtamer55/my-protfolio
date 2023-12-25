@@ -10,16 +10,19 @@ const SkillsSection = () => {
 
         const skillDistanceX = (movingSkills.length - 2) * -100
 
-        gsap.to(movingSkills,{
-            xPercent: skillDistanceX,
-            scrollTrigger : {
-                scrub:1.25,
-                trigger:".home .skills-section",
-                pin:true,
-                end:"+=2500"
-
-            }
-        })
+   
+            gsap.fromTo(movingSkills,{
+                xPercent:60
+            },{
+                xPercent: skillDistanceX,
+                scrollTrigger : {
+                    scrub:1.25,
+                    trigger:".home .skills-section",
+                    pin:true,
+                    end:"+=2500"
+    
+                }
+            })
     },[])
     
     return (
@@ -34,6 +37,7 @@ const SkillsSection = () => {
                     {
                         Skills.map((skill,idx) => (
                             <div key={idx} className='h-full relative moving-skill p-3 flex items-center justify-center border-main-wheat border-2 border-solid aspect-square'>
+                                <span className='absolute top-2 font-algeros left-2 text-main-wheat text-2xl'>0{idx + 1}</span>
                                 <img className=' w-1/2 h-1/2 object-contain' src={skill.href} alt="skill-img" />
                                 <span className='text-3xl text-main-wheat absolute opacity-0 right-1/2 bottom-1/2 w-full text-center translate-y-1/2 translate-x-1/2'>{skill.name}</span>
                             </div>

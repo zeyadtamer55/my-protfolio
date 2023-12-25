@@ -14,11 +14,11 @@ const AboutSection = () => {
         animatedChars.forEach(char => {
             gsap.from(char,{
                 yPercent:200,
-                ease:"back",
+                ease:"power2",
                 scrollTrigger:{
                     trigger:char,
                     scrub:3,
-                    end:"top center"   
+                    end:"top center"
                 },
                 
             })
@@ -30,7 +30,7 @@ const AboutSection = () => {
         <div className='container !pt-[100px] min-h-screen about-section'>
             <h2 className=' font-algeros text-7xl w-fit mt-3 text-main-wheat'>about me</h2>
             
-            <div className='text-3xl overflow-hidden mt-4'>
+            <div className='text-2xl sm:text-3xl  overflow-hidden mt-4'>
                 <span className='inline-block moving-to-up-word'>
                     {
                         title

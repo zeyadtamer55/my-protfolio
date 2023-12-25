@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Logo = () => {
     
     return (
-        <Link to="/">
+        <Link className='logo' to="/">
             <h1 className=' font-algeros text-4xl '>
                 
                 zeyad

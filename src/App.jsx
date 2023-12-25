@@ -3,9 +3,21 @@ import Pages from "./Data/Pages"
 import Header from "./Layout/Header/Header"
 import AnimCursor from "./Layout/AnimCursor"
 import Menu from "./Layout/Menu/Menu"
-import MainBg from "./Layout/MainBg/MainBg"
+import { useEffect } from "react"
+import Lenis from "@studio-freight/lenis"
 
 function App() {
+
+    useEffect(()=>{
+        const lenis = new Lenis()
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    },[])
 
     return (
         <>
@@ -14,7 +26,6 @@ function App() {
                 <Menu/>
                 <Header/>
                 <AnimCursor/>
-                <MainBg/>
 
                 <Routes>
 

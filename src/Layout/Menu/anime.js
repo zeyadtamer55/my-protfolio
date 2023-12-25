@@ -34,11 +34,20 @@ export const openMenu = () => {
         },
         duration:1,
         ease:"power2.inOut",
-        onStart: () => document.querySelector(".menu-icon").classList.add("gold")
 
     })
  
- 
+    tl.to("div.menu-icon div span.rotating-dash", {
+        background:"var(--main-wheat)",
+    },"<")
+    
+    tl.to("div.menu-icon div span.morphing-shape", {
+        borderColor:"var(--main-wheat)",
+    },"<")
+    
+    tl.to("header .logo", {
+        color:"var(--main-wheat)",
+    },"<")
 
     tl.to(menuSvgPath,{
         attr: {
@@ -90,9 +99,20 @@ export const closeMenu = () => {
         },
         duration:1,
         ease:"power2.inOut",
-        onStart: () => document.querySelector(".menu-icon").classList.remove("gold")
     })
 
+
+    tl.to("div.menu-icon div span.rotating-dash", {
+        background:"#141414",
+    },"<")
+    
+    tl.to("div.menu-icon div span.morphing-shape", {
+        borderColor:"#141414",
+    },"<")
+    
+    tl.to("header .logo", {
+        color:"#141414",
+    },"<")
 
     tl.to(menuSvgPath,{
         y:-100,
