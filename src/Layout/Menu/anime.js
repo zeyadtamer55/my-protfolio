@@ -11,21 +11,23 @@ export const openMenu = () => {
 
     
     const tl = gsap.timeline()
-    
+  
+
     tl.to(".menu",{
         visibility:"visible",
+        onStart:() => document.querySelector("header").classList.add("gold")
+
     })
 
-    tl.fromTo(menuSvgPath, {
-        y:-100,
-    },{y:0})
+    tl.fromTo(menuSvgPath, {y:-100,},{y:0})
     
     tl.to(menuSvgPath,{
         attr: {
             d:start
         },
         duration:1,
-        ease:"power2.inOut"
+        ease:"power2.inOut",
+
     },"-1")
     
     tl.to(menuSvgPath,{
@@ -36,18 +38,7 @@ export const openMenu = () => {
         ease:"power2.inOut",
 
     })
- 
-    tl.to("div.menu-icon div span.rotating-dash", {
-        background:"var(--main-wheat)",
-    },"<")
-    
-    tl.to("div.menu-icon div span.morphing-shape", {
-        borderColor:"var(--main-wheat)",
-    },"<")
-    
-    tl.to("header .logo", {
-        color:"var(--main-wheat)",
-    },"<")
+
 
     tl.to(menuSvgPath,{
         attr: {
@@ -88,7 +79,8 @@ export const closeMenu = () => {
             d:middle
         },
         duration:1,
-        ease:"power2.inOut"
+        ease:"power2.inOut",
+
     })
 
 
@@ -99,28 +91,21 @@ export const closeMenu = () => {
         },
         duration:1,
         ease:"power2.inOut",
+        onStart:() => document.querySelector("header").classList.remove("gold")
+
     })
 
 
-    tl.to("div.menu-icon div span.rotating-dash", {
-        background:"#141414",
-    },"<")
-    
-    tl.to("div.menu-icon div span.morphing-shape", {
-        borderColor:"#141414",
-    },"<")
-    
-    tl.to("header .logo", {
-        color:"#141414",
-    },"<")
 
-    tl.to(menuSvgPath,{
-        y:-100,
-    })
+
+    tl.to(menuSvgPath,{y:-100,})
 
     tl.to(".menu",{
         visibility:"hidden",
+
     })
+    
+  
 }
 
 

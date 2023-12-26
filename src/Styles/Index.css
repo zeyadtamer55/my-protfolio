@@ -16,6 +16,7 @@
 
 
 
+
 @keyframes translate {
     0% {
         transform: translate3d(calc(-25%), 0, 0);
@@ -70,4 +71,7 @@ a {
 
 .ease-1s {
     transition: 1s ease;
+    
 }
+
+

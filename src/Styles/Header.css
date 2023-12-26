@@ -65,5 +65,20 @@ span.rotating-dash {
     transition: .7s;
 } 
 
+header.gold .menu-icon span.morphing-shape {
+    transition-duration:.7s ;
+    transition-delay: 1s;
+    border-color: var(--main-wheat)  !important;
+}
 
+header.gold .menu-icon span.rotating-dash {
+    transition-duration:.7s ;
+    transition-delay: 1s;
+    background-color: var(--main-wheat) !important;
+}
 
+header.gold a h1 {
+    transition-duration:.7s ;
+    transition-delay: 1s;
+    color: var(--main-wheat) !important;
+}
