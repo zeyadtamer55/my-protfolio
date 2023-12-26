@@ -32,7 +32,7 @@ function AnimatedOnScrollText({text ,textColor}) {
                     trigger:line,
                     start:"top center",
                     end:"bottom center",
-                    scrub:4
+                    scrub:5
                 }
             })
         })

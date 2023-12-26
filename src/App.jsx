@@ -9,14 +9,24 @@ import Lenis from "@studio-freight/lenis"
 function App() {
 
     useEffect(()=>{
-        const lenis = new Lenis()
+        let lenis
+        window.onresize = () => {
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
+            if (window.innerWidth > 800) {
+                lenis = new Lenis()
+
+                function raf(time) {
+                    lenis.raf(time)
+                    requestAnimationFrame(raf)
+                }
+        
+                requestAnimationFrame(raf)
+            } else {
+                lenis = null
+            }
+
         }
 
-        requestAnimationFrame(raf)
     },[])
 
     return (
