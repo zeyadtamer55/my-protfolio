@@ -10,7 +10,7 @@ function App() {
 
     useEffect(()=>{
         let lenis
-        if (window.innerWidth > 900) {
+        if (window.innerWidth >= 900) {
             lenis = new Lenis()
 
             function raf(time) {

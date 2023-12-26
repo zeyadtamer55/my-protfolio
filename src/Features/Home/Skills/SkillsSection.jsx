@@ -11,7 +11,7 @@ const SkillsSection = () => {
         const skillDistanceX = (skills.length - 2) * -100
 
    
-        if (window.innerWidth > 1004) {
+        if (window.innerWidth >= 1024) {
             gsap.fromTo(skills,{
                 xPercent:60
             },{
