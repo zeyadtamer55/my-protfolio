@@ -21,28 +21,32 @@ function AnimatedOnScrollText({text ,textColor}) {
         window.onresize = () => {
             splitedText.revert()
             splitText()
+            animateLines()
+        }
+        
+
+        const animateLines = () => {
+            document.querySelectorAll(".line").forEach(line => {
+                gsap.to(line.querySelector("span"),{
+                    xPercent:100,
+                    scrollTrigger:{
+                        trigger:line,
+                        start:"top center",
+                        end:"bottom center",
+                        scrub:3
+                    }
+                })
+            })
         }
         splitText()
-
-    
-        document.querySelectorAll(".line").forEach(line => {
-            gsap.to(line.querySelector("span"),{
-                xPercent:100,
-                scrollTrigger:{
-                    trigger:line,
-                    start:"top center",
-                    end:"bottom center",
-                    scrub:5
-                }
-            })
-        })
+        animateLines()
 
     })
 
     return (
         <div className='container'>
             
-            <div id='splitTypeText' className={` ${textColor} my-32 text-9xl`}>
+            <div id='splitTypeText' className={` ${textColor} uppercase my-32 text-8xl`}>
                 {text}
             </div>
         </div>

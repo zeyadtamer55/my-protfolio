@@ -34,7 +34,7 @@ const Menu = () => {
         <>
     
             
-            <div className='w-full invisible z-[100] menu fixed top-0 pt-[100px] left-0 overflow-hidden h-screen'>
+            <div className='w-full invisible z-[100] menu fixed top-0  left-0 overflow-hidden h-screen'>
 
 
                 <div className="absolute overlay z-0 left-0 top-0 h-screen w-full ">

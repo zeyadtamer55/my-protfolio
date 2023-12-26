@@ -1,15 +1,23 @@
-.moving-skill img {
+
+
+.skill img {
     transition: .4s;
 }
 
-.moving-skill span {
+.skill span {
     transition: .4s;
 }
 
-.moving-skill:hover img {
-    opacity: 0;
+@media (min-width: 1024px) {
+
+    
+    .skill:hover img {
+        opacity: 0;
+    }
+    
+    .skill:hover span {
+        opacity: 1;
+    }
 }
 
-.moving-skill:hover span {
-    opacity: 1;
-}
+
