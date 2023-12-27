@@ -8,22 +8,25 @@ import Lenis from "@studio-freight/lenis"
 
 function App() {
 
-    // useEffect(()=>{
-    //     let lenis
-    //     if (window.innerWidth >= 900) {
-    //         lenis = new Lenis()
+    useEffect(()=>{
+        let lenis
+        if (window.innerWidth > 900) {
+            console.log("nice");
+            lenis = new Lenis()
 
-    //         function raf(time) {
-    //             lenis.raf(time)
-    //             requestAnimationFrame(raf)
-    //         }
+            function raf(time) {
+                lenis.raf(time)
+                requestAnimationFrame(raf)
+            }
     
-    //         requestAnimationFrame(raf)
-    //     } else {
-    //         lenis = null
-    //     }
+            requestAnimationFrame(raf)
+        } else {
+            lenis = null
+        }
 
-    // },[])
+        
+
+    },[])
 
     return (
         <>

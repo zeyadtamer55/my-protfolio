@@ -11,22 +11,16 @@ function AnimatedOnScrollText({text ,textColor}) {
         const splitText = () => {
             splitedText = new splitType("#splitTypeText",{types:"lines, words"})
             
-            document.querySelectorAll(".line").forEach(line => {
+            gsap.utils.toArray(".line").forEach(line => {
                 line.style.position = "relative"
                 line.style.overflow = "hidden"
                 line.innerHTML += "<span class='absolute top-0 left-0 w-full h-full bg-main-black opacity-70'></span>"
             })
         }
-
-        window.onresize = () => {
-            splitedText.revert()
-            splitText()
-            animateLines()
-        }
         
 
         const animateLines = () => {
-            document.querySelectorAll(".line").forEach(line => {
+            gsap.utils.toArray(".line").forEach(line => {
                 gsap.to(line.querySelector("span"),{
                     xPercent:100,
                     scrollTrigger:{
@@ -49,6 +43,7 @@ function AnimatedOnScrollText({text ,textColor}) {
             <div id='splitTypeText' className={` ${textColor} uppercase my-32 text-8xl`}>
                 {text}
             </div>
+        
         </div>
     )
 }
