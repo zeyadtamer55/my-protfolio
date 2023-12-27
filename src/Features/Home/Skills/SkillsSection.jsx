@@ -55,7 +55,7 @@ const SkillsSection = () => {
                             <div key={idx} className=' lg:h-[225px] h-[50px] w-full relative skill p-3 lg:p-1 flex items-center gap-2 justify-center border-main-wheat border-2 border-solid lg:aspect-square'>
                                 <span className='absolute top-2 hidden lg:block font-algeros left-2 text-main-wheat text-2xl'>0{idx + 1}</span>
                                 <img className='  aspect-square h-full lg:h-1/2 object-contain' src={skill.href} alt="skill-img" />
-                                <span className='text-3xl relative text-main-wheat lg:absolute lg:opacity-0 lg:right-1/2 lg:bottom-1/2 lg:w-full text-center lg:translate-y-1/2 lg:translate-x-1/2'>{skill.name}</span>
+                                <span className='xs:text-3xl text-lg relative text-main-wheat lg:absolute lg:opacity-0 lg:right-1/2 lg:bottom-1/2 lg:w-full text-center lg:translate-y-1/2 lg:translate-x-1/2'>{skill.name}</span>
                             </div>
                         ))
                     }

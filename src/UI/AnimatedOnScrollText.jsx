@@ -31,7 +31,7 @@ function AnimatedOnScrollText({text ,textColor}) {
                     xPercent:100,
                     scrollTrigger:{
                         trigger:line,
-                        start:"top center",
+                        start:"bottom bottom",
                         end:"bottom center",
                         scrub:3
                     }
