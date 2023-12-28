@@ -10,12 +10,7 @@ const MainBg = () => {
     const mainBg = useRef()
 
     useEffect(()=>{
-
-        const tl = gsap.timeline()
-        const aboutSection = gsap.utils.toArray(".home .about-section")
-        animateHeaderOnScroll(tl,aboutSection)
         
-    
         animateMainBg(mainBg.current)
  
     },[])

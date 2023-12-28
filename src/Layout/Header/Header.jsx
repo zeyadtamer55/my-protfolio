@@ -2,11 +2,16 @@ import React, { useEffect } from 'react'
 import Logo from './Logo'
 import MenuIcon from './MenuIcon'
 import "../../Styles/Header.css"
+import gsap from 'gsap'
+import { animateHeaderOnScroll } from './anime'
 
 
 const Header = () => {
 
-
+    useEffect(()=>{
+        const tl = gsap.timeline()
+        animateHeaderOnScroll(tl)
+    },[])
 
     return (
         <>
