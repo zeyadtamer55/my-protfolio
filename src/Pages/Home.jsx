@@ -18,7 +18,11 @@ const Home = () => {
             
                 <Hero/>
                 <AboutSection/>
-                <AnimatedOnScrollText textColor={"text-main-wheat"} text={"i bring clients ideas to live"}/>
+                <div className='w-full my-32'>
+                    <AnimatedOnScrollText overlayColor={"bg-main-black"} textColor={"text-main-wheat"} text={"i bring clients "}/>
+                    <AnimatedOnScrollText overlayColor={"bg-main-black"} textColor={"text-main-wheat"} text={"ideas to live"}/>
+                </div>
+                  
                 <SkillsSection/>
                 <RevealBgSection/>
                 <ProjectsSection/>
