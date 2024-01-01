@@ -5,6 +5,7 @@ import AnimCursor from "./Layout/AnimCursor"
 import Menu from "./Layout/Menu/Menu"
 import { useEffect } from "react"
 import Lenis from "@studio-freight/lenis"
+import Loader from "./Layout/Loader/Loader"
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <>
             <BrowserRouter>
                 
+                {/* <Loader/> */}
                 <Menu/>
                 <Header/>
                 <AnimCursor/>

@@ -75,3 +75,13 @@ a {
 }
 
 
+.splited-text .revealed-text {
+    transform: rotateX(90deg);  
+    transition: .5s; 
+}
+
+.splited-text:hover .revealed-text {
+    transform: rotateX(0);    
+
+}
+

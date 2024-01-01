@@ -8,7 +8,7 @@ export const useGlobalContextFunc = () => useContext(Context)
 
 const GlobalContext = ( { children } ) => {
     
-    const { isLoading , isError, data } = useFetch('https://fakestoreapi.com/products')
+    let { isLoading , isError, data } = useFetch('https://api.github.com/users/zeyadtamer55/repos')
 
     const [showMenu,setShowMenu] = useState(false)
     

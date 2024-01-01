@@ -19,8 +19,22 @@ const Home = () => {
                 <Hero/>
                 <AboutSection/>
                 <div className='w-full my-32'>
-                    <AnimatedOnScrollText overlayColor={"bg-main-black"} textColor={"text-main-wheat"} text={"i bring clients "}/>
-                    <AnimatedOnScrollText overlayColor={"bg-main-black"} textColor={"text-main-wheat"} text={"ideas to live"}/>
+                    <AnimatedOnScrollText
+                        overlayColor={"bg-main-black"}
+                        textColor={"text-main-wheat"} 
+                        text={"i bring clients "}
+                        revealedText={"but they "}
+                        revealedTextColor={"text-main-black"}
+                        revealedTextBg={"bg-main-wheat"}
+                    />
+                    <AnimatedOnScrollText
+                        overlayColor={"bg-main-black"}
+                        textColor={"text-main-wheat"} 
+                        text={"ideas to live"}
+                        revealedText={"are too bad"}
+                        revealedTextColor={"text-main-black"}
+                        revealedTextBg={"bg-main-wheat"}
+                    />
                 </div>
                   
                 <SkillsSection/>

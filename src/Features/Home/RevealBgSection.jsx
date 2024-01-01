@@ -7,7 +7,7 @@ const RevealBgSection = () => {
     useEffect(()=>{
         if (window.innerWidth > 900)
         gsap.to(".home .reveal-bg-section h3",{
-            scale:380,
+            scale:370,
             xPercent:260,
             ease:"none",
             duration:1000000000,

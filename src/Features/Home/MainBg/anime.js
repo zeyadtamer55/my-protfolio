@@ -52,7 +52,7 @@ const animateOnEnterRevealSection = (tl,mainBg) => {
             backgroundColor:"#e9e1c5",
             duration:1,
             scrollTrigger:{
-                trigger: ".home .projects-section ",
+                trigger: ".home .reveal-bg-section ",
                 scrub:1,
                 start:"top center",
                 end:"top top",
@@ -65,7 +65,7 @@ const animateOnEnterRevealSection = (tl,mainBg) => {
             color:"#141414",
             duration:1,
             scrollTrigger:{
-                trigger: ".home .projects-section ",
+                trigger: ".home .reveal-bg-section ",
                 scrub:1,
                 start:"top center",
                 end:"top top",
