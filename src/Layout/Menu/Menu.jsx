@@ -38,11 +38,10 @@ const Menu = () => {
 
 
                 <div className="absolute overlay z-0 left-0 top-0 h-screen w-full ">
-                    <svg viewBox="0 0 1000 1000">
+                    <svg width="100%" height="100%" viewBox="0 0 1000 1000" preserveAspectRatio="none">
                         <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
                     </svg>
                 </div>
-            
 
                 <MenuItemsHolder/>
 
