@@ -1,11 +1,14 @@
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/all"
 
+gsap.registerPlugin(ScrollTrigger)
 
 
 export const animateHeaderOnScroll = (tl) => {
 
     
 
-    OnEnterRevealSection(tl)
+    onEnterRevealSection(tl)
 
 
 
@@ -54,7 +57,7 @@ export const animateHeaderOnScroll = (tl) => {
 
 }
 
-const OnEnterRevealSection = (tl) => {
+const onEnterRevealSection = (tl) => {
     if (window.innerWidth > 900) {
         tl.fromTo("header .logo",{
             color:"var(--main-wheat)"
@@ -62,10 +65,10 @@ const OnEnterRevealSection = (tl) => {
             color:"#141414",
             duration:1,
             scrollTrigger:{
-                trigger: ".home .reveal-bg-section ",
+                trigger: ".home .projects-section ",
                 scrub:true,
-                start:"+=8800",
-                end:"+=10",
+                start:"-150% bottom",
+                end:"top bottom"
             }
         })
         
@@ -75,10 +78,10 @@ const OnEnterRevealSection = (tl) => {
             backgroundColor:"#141414",
             duration:1,
             scrollTrigger:{
-                trigger: ".home .reveal-bg-section ",
+                trigger: ".home .projects-section ",
                 scrub:true,
-                start:"+=8800",
-                end:"+=10",
+                start:"-150% bottom",
+                end:"top bottom"
             }
         },"<")
         
@@ -88,12 +91,13 @@ const OnEnterRevealSection = (tl) => {
             borderColor:"#141414",
             duration:1,
             scrollTrigger:{
-                trigger: ".home .reveal-bg-section ",
+                trigger: ".home .projects-section ",
                 scrub:true,
-                start:"+=8800",
-                end:"+=10",
+                start:"-150% bottom",
+                end:"top bottom"
             }
         },"<")
+        
     } else {
         tl.fromTo("header .logo",{
             color:"var(--main-wheat)"
@@ -103,8 +107,8 @@ const OnEnterRevealSection = (tl) => {
             scrollTrigger:{
                 trigger: ".home .projects-section ",
                 scrub:true,
-                start:"top center",
-                end:"top top",
+                start:"top bottom",
+                end:"top 80%",
             }
         })
         
@@ -116,8 +120,8 @@ const OnEnterRevealSection = (tl) => {
             scrollTrigger:{
                 trigger: ".home .projects-section ",
                 scrub:true,
-                start:"top center",
-                end:"top top",
+                start:"top bottom",
+                end:"top 80%",
            
             }
         },"<")
@@ -130,8 +134,8 @@ const OnEnterRevealSection = (tl) => {
             scrollTrigger:{
                 trigger: ".home .projects-section ",
                 scrub:true,
-                start:"top center",
-                end:"top top",
+                start:"top bottom",
+                end:"top 80%",
             }
         },"<")
     }

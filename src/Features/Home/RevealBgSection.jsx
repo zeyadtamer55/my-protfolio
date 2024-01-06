@@ -5,19 +5,26 @@ const RevealBgSection = () => {
     
 
     useEffect(()=>{
-        if (window.innerWidth > 900)
-        gsap.to(".home .reveal-bg-section h3",{
-            scale:370,
-            xPercent:260,
-            ease:"none",
-            duration:1000000000,
-            scrollTrigger:{
-                trigger: ".home .reveal-bg-section",
-                scrub:true,
-                end:"+=10000",
-                pin:true,
-            }
-        })
+        const tl = gsap.timeline()
+        
+        if (window.innerWidth > 900) {
+                tl.to(".home .reveal-bg-section h3",{
+                scale:370,
+                xPercent:260,
+                ease:"none",
+                duration:1000000000,
+                scrollTrigger:{
+                    trigger: ".home .reveal-bg-section",
+                    scrub:true,
+                    end:"+=10000",
+                    pin:true,
+                }
+            })
+        }
+
+        return () => {
+            tl.revert()
+        }
     },[])
 
     return (

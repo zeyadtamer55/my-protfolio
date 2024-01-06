@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { animateMainBg } from './anime'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import { animateHeaderOnScroll } from '../../../Layout/Header/anime'
 gsap.registerPlugin(ScrollTrigger)
 
 const MainBg = () => {
@@ -9,9 +10,15 @@ const MainBg = () => {
     const mainBg = useRef()
 
     useEffect(()=>{
+        const tl  = gsap.timeline()
+
         
-        animateMainBg(mainBg.current)
- 
+        animateMainBg(tl,mainBg.current)
+        animateHeaderOnScroll(tl)
+
+        return () => {
+            tl.revert()
+        }
     },[])
 
     return (
