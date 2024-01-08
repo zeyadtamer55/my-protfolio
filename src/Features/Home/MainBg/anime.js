@@ -7,7 +7,7 @@ export const animateMainBg = (tl,mainBg) => {
     
     const aboutSection = gsap.utils.toArray(".home .about-section")
 
-    animateOnEnterRevealSection(tl,mainBg)
+    animateOnEnterProjectsSection(tl,mainBg)
 
     tl.fromTo(mainBg,{
         backgroundColor : "#e9e1c5",
@@ -41,7 +41,7 @@ export const animateMainBg = (tl,mainBg) => {
 } 
 
 
-const animateOnEnterRevealSection = (tl,mainBg) => {
+const animateOnEnterProjectsSection = (tl,mainBg) => {
     
     if (window.innerWidth < 900) {
         tl.fromTo(mainBg,{
@@ -53,8 +53,8 @@ const animateOnEnterRevealSection = (tl,mainBg) => {
             scrollTrigger:{
                 trigger: ".home .projects-section ",
                 scrub:1,
-                start:"top bottom",
-                end:"top 80%",
+                start:"top center",
+                end:"top top",
             }
         })
 
@@ -66,8 +66,8 @@ const animateOnEnterRevealSection = (tl,mainBg) => {
             scrollTrigger:{
                 trigger: ".home .projects-section ",
                 scrub:1,
-                start:"top bottom",
-                end:"top 80%",
+                start:"top center",
+                end:"top top",
             }
         })
     }

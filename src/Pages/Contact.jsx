@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Hero from "../Features/Contact/Hero"
+import ContactForm from "../Features/Contact/ContactForm"
 
 const Contact = () => {
+    
+    
     return (
-        <div>contact</div>
+        <div className='contact'>
+            
+            <Hero/>
+            <ContactForm/>
+
+        </div>
     )
 }
 

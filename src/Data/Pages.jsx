@@ -7,17 +7,20 @@ const Pages = [
     {
         name:"index",
         href:"/",
-        component:<Home/>
+        component:<Home/>,
+        description:"lets dive to creativity"
     },
     {
         name:"contact",
         href:"/contact",
-        component:<Contact/>
+        component:<Contact/>,
+        description:"have an idea? ,lets work Together"
     },
     {
-        name:"projects",
+        name:"my artwork",
         href:"/projects",
-        component:<Projects/>
+        component:<Projects/>,
+        description:"want to see my projects?"
     },
 
 ]

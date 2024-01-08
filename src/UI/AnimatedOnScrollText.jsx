@@ -24,7 +24,7 @@ function AnimatedOnScrollText({text ,revealedTextColor ,revealedTextBg , reveale
     })
 
     return (
-    <div className='w-full md:text-8xl md:text-left text-center text-5xl overflow-hidden'>
+    <div className='w-full md:text-8xl sm:text-5xl text-[2rem] md:text-left text-center overflow-hidden'>
     
         <div className='relative splited-text'>
             

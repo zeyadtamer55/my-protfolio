@@ -6,7 +6,7 @@ import Title from "./Title"
 const Hero = () => {
     
     return (
-        <div className='w-full hero-section relative h-screen pt-[100px] '>
+        <div className='w-full home-hero-section relative h-screen pt-[100px] '>
 
             <div className='absolute z-0 blur-xl'>
                 <div className="morphing-shape overflow-hidden w-[300px] aspect-square">
