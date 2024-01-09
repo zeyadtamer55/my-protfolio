@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import closeIcon from "../../Assets/Icons/close.svg"
+import { closeContactForm } from '../../anime/ContactForm'
 
 const ContactForm = () => {
     
@@ -7,15 +8,18 @@ const ContactForm = () => {
     const [phone,setPhone] = useState("")
     const [message,setMessage] = useState("")
 
+    
+
+
 
     return (
-        <div className='fixed overflow-auto top-0 w-full z-[-500] left-0 h-screen bg-main-black'>
+        <div className='fixed contact-form hidden opacity-0 overflow-auto top-0 w-full h-screen z-[500] left-0  bg-main-black'>
             
             <div className="container h-full flex flex-col">
                 
                 <div id="contact-close-icon" className='p-4 items-center flex !h-fit justify-between w-full'>
                     <p className='text-4xl text-main-wheat'>feel free to contact me</p>
-                    <img src={closeIcon} className=' w-10 h-10 object-contain clickable' alt="close-icon" />
+                    <img onClick={()=> closeContactForm()} src={closeIcon} className=' w-10 h-10 object-contain clickable' alt="close-icon" />
                 </div>
                                 
                 <div className=' text-main-wheat flex flex-col w-full'>

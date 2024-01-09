@@ -1,7 +1,7 @@
 import React from 'react'
 import Pages from '../../Data/Pages'
 import { NavLink } from 'react-router-dom'
-import { closeMenu } from './anime'
+import { closeMenu } from '../../anime/Menu'
 
 
 

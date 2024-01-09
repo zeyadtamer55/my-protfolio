@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
-import { closeMenu, openMenu } from "./anime"
+import { closeMenu, openMenu } from "../../anime/Menu.js"
 import MenuItemsHolder from "./MenuItemsHolder"
 import "../../Styles/Menu.css"
 
