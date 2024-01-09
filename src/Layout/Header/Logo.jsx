@@ -8,7 +8,7 @@ const Logo = () => {
 
     return (
         <Link className='logo' to="/">
-            <h1 className=' font-algeros text-4xl '>
+            <h1 className='text-main-black font-algeros text-4xl '>
                 
                 zeyad
                 tamer

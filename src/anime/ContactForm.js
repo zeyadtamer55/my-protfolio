@@ -4,6 +4,10 @@ export const openContactForm = () => {
 
     const tl = gsap.timeline()
 
+    tl.to("header",{
+        pointerEvents:"none"
+    })
+
     tl.to(".contact .contact-hero-section #get-in-touch-btn",{
         opacity:0,
         duration:.6,
@@ -39,6 +43,8 @@ export const closeContactForm = () => {
     
     const tl = gsap.timeline()
     
+ 
+
     tl.to(".contact .contact-form",{
         opacity:0,
         duration:2,
@@ -61,6 +67,10 @@ export const closeContactForm = () => {
         opacity:1,
         duration:.6,
         display:"block"
+    })
+
+    tl.to("header",{
+        pointerEvents:"initial"
     })
 
 }
